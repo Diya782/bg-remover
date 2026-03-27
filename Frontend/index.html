@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>✨ Remove Background Instantly</h1>
+    <p>Upload image and get transparent background</p>
+
+    <div class="card">
+
+        <div class="upload-box" id="uploadBox">
+            <input type="file" id="fileInput" hidden>
+            <p>📤 Drag & Drop or Click to Upload</p>
+        </div>
+
+        <button onclick="uploadImage()">Remove Background</button>
+
+        <div id="loader" class="hidden">⚡ Processing...</div>
+
+        <!-- IMAGE COMPARISON -->
+        <div class="image-container hidden" id="imageContainer">
+            <div>
+                <h3>Original</h3>
+                <img id="originalImg">
+            </div>
+
+            <div>
+                <h3>Result</h3>
+                <img id="resultImage">
+            </div>
+        </div>
+
+        <!-- DOWNLOAD -->
+        <a id="downloadBtn" class="hidden" download="output.png">
+            <button class="download">⬇️ Download</button>
+        </a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
